@@ -1,0 +1,45 @@
+.aboutus {
+  width: 1170px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  &__title {
+    width: 352px;
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+  &__content {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0;
+  }
+}
+&__item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+&__img {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+&__label {
+  width: 370px;
+  height: 70px;
+  color: $secondaryColor;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+&__delay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

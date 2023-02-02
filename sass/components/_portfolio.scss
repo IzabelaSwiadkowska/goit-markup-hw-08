@@ -1,0 +1,102 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+&__name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  width: 322px;
+  padding-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+&__description {
+  color: $alternativeColor;
+  font-size: 16px;
+  line-height: 1.87;
+  width: 322px;
+  padding-left: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+&__overlay {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  padding: 49px 45px 49px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  color: $secondaryColor;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
+&__item {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.buttons {
+  width: 572px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 34px;
+  margin-top: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &__item {
+    font-weight: 500;
+    background-color: $thirdBackgroundColor;
+    font-size: 16px;
+    line-height: 1.62;
+    cursor: pointer;
+    padding: 6px 22px;
+    border: 0px solid;
+    border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.62;
+      color: $secondaryColor;
+      background-color: $logoWebColor;
+    }
+  }
+}
+.grid {
+  width: 1170px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  &__item {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    border-bottom: 1px solid #eeeeee;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+}
+
+&:hover .products__overlay {
+  transform: translatey(0);
+}
