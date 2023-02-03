@@ -2,6 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework2 - main page</title>
     <link
       rel="stylesheet"
@@ -60,6 +61,17 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="container">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24" height="16">
+            <use href="./images/icons.svg#icon-menu_24px"></use>
+          </svg>
+        </button>
       </div>
       <section class="main-page">
         <div class="main-page__overlay container">
@@ -499,5 +511,15 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="24" height="16">
+          <use href="./images/icons.svg#icon-menu_24px"></use>
+        </svg>
+
+        >
+      </button>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
