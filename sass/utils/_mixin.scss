@@ -1,0 +1,7 @@
+@mixin hide-on-mobile {
+  .navigation,
+  .contact,
+  .aboutus {
+    display: none;
+  }
+}
