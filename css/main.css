@@ -1,13 +1,19 @@
 @media (max-width: 767px) {
-  .navigation {
+  .section-to-hide {
     display: none;
   }
-  .contact {
+  .navigation-to-hide {
     display: none;
   }
 }
 @media (min-width: 768px) {
-  .menu__toggle {
+  .container {
+    min-width: 768px;
+  }
+  .menu {
+    display: none;
+  }
+  .menu-container {
     display: none;
   }
   .main-page {
@@ -23,12 +29,45 @@
     margin: 0 auto;
     margin-bottom: 60px;
   }
-  .attribute {
-    width: 354px;
+}
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192pi), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .main-page {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/header/Img-header_1536_800.png");
+    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("/images/header/Img-header_1536_800.png");
   }
-  .attribute__text {
-    width: 354px;
+}
+@media (min-width: 768px) and (min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 268pi), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 3dppx) {
+  .main-page {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/header/Img-header_2304_1200.jpg");
+    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("/images/header/Img-header_2304_1200.jpg");
   }
+}
+@media (min-width: 768px) {
+  .section-to-hide {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .navigation-to-hide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 101px;
+  }
+}
+@media (min-width: 768px) {
+  .navigation__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .page-header__overlay {
+    height: 80px;
+  }
+}
+@media (min-width: 768px) {
   .block__list {
     width: 738px;
     display: -webkit-box;
@@ -37,22 +76,40 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  .block_item {
-    -ms-flex-preferred-size: calc((100% - 30px) / 2);
-        flex-basis: calc((100% - 30px) / 2);
-    margin: 0;
   }
 }
-@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192pi), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) {
+  .block__item {
+    max-width: 354px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 768px) {
+  .attribute {
+    max-width: 354px;
+  }
+}
+@media (min-width: 768px) {
+  .block__item:not(:last-child) {
+    margin-bottom: o;
+  }
+}
+@media (min-width: 768px) {
+  .attribute__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 354px;
+  }
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192pi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .main-page {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/header/Img-header_960_800.png"), url("/images/header/Img-header_1536_800.png"), url("/images/header/Img-header_3200_1200.jpg");
     background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("/images/header/Img-header_960_800.png"), url("/images/header/Img-header_1536_800.png"), url("/images/header/Img-header_3200_1200.jpg");
   }
 }
-@media (min-width: 768px) and (min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 268pi), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 3dppx) {
+@media (min-device-pixel-ratio: 3), (min-resolution: 268pi), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
   .main-page {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/header/Img-header_1440_1200.jpg"), url("/images/header/Img-header_2304_1200.jpg"), url("/images/header/Img-header_4800_1200.jpg");
     background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("/images/header/Img-header_1440_1200.jpg"), url("/images/header/Img-header_2304_1200.jpg"), url("/images/header/Img-header_4800_1200.jpg");
@@ -116,6 +173,8 @@ h4 {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .logo:hover,
@@ -139,7 +198,6 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 60px;
 }
 
 .page-header__logo {
@@ -533,6 +591,18 @@ h4 {
   margin-bottom: 60px;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192pi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .main-page {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/header/Img-header_960_800.png");
+    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("/images/header/Img-header_960_800.png");
+  }
+}
+@media (min-device-pixel-ratio: 3), (min-resolution: 268pi), (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .main-page {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/header/Img-header_1440_1200.jpg");
+    background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("/images/header/Img-header_1440_1200.jpg");
+  }
+}
 .main-page__title {
   color: #ffffff;
   font-weight: 900;
@@ -647,6 +717,9 @@ h4 {
 .aboutus {
   width: 1170px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1316,7 +1389,7 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 15px;
+  margin-right: 10px;
   padding: 0;
   background-color: #ffffff;
   cursor: pointer;

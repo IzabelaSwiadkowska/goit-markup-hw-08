@@ -1,13 +1,11 @@
-@media (max-width: 767px) {
-  .navigation {
-    display: none;
-  }
-  .contact {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
-  .menu__toggle {
+  .container {
+    min-width: 768px;
+  }
+  .menu {
+    display: none;
+  }
+  .menu-container {
     display: none;
   }
   .main-page {
@@ -27,25 +25,6 @@
     margin: 0 auto;
     margin-bottom: 60px;
   }
-  .attribute {
-    width: 354px;
-  }
-  .attribute__text {
-    width: 354px;
-  }
-  .block__list {
-    width: 738px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  .block_item {
-    flex-basis: calc((100% - 1 * 30px) / 2);
-    margin: 0;
-  }
-
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192pi),
     (min-resolution: 2dppx) {
@@ -55,9 +34,7 @@
           rgba(47, 48, 58, 0.4) 0%,
           rgba(47, 48, 58, 0.4) 100%
         ),
-        url("/images/header/Img-header_960_800.png"),
-        url("/images/header/Img-header_1536_800.png"),
-        url("/images/header/Img-header_3200_1200.jpg");
+        url("/images/header/Img-header_1536_800.png");
     }
   }
   @media (min-device-pixel-ratio: 3),
@@ -69,9 +46,41 @@
           rgba(47, 48, 58, 0.4) 0%,
           rgba(47, 48, 58, 0.4) 100%
         ),
-        url("/images/header/Img-header_1440_1200.jpg"),
-        url("/images/header/Img-header_2304_1200.jpg"),
-        url("/images/header/Img-header_4800_1200.jpg");
+        url("/images/header/Img-header_2304_1200.jpg");
     }
+  }
+
+  .section-to-hide {
+    display: none;
+  }
+  .navigation-to-hide {
+    display: flex;
+    gap: 101px;
+  }
+  .navigation__item {
+    align-items: center;
+  }
+  .page-header__overlay {
+    height: 80px;
+  }
+  .block__list {
+    width: 738px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .block__item {
+    max-width: 354px;
+    flex-basis: calc((100% - 1 * 30px) / 2);
+  }
+  .attribute {
+    max-width: 354px;
+  }
+  .block__item:not(:last-child) {
+    margin-bottom: o;
+  }
+  .attribute__title {
+    display: flex;
+    width: 354px;
   }
 }
