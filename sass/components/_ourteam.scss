@@ -73,3 +73,26 @@
     }
   }
 }
+@media (min-width: 768px) {
+  .ourteam {
+    width: 768px;
+  }
+  .ourteam__list {
+    display: flex;
+    width: 768px;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  .ourteam__item {
+    width: 354px;
+    height: 536px;
+    flex-basis: calc((100% - 1 * 30px) / 2);
+  }
+  .ourteam__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .ourteam__item:last-child {
+    margin-bottom: 0;
+  }
+}

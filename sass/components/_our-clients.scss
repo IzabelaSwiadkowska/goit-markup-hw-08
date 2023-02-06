@@ -9,6 +9,7 @@
     justify-content: center;
   }
   &__headline {
+    width: 314px;
     margin-top: 0;
     margin-bottom: 50px;
   }
@@ -51,5 +52,28 @@
   to {
     fill: $colorFiller;
     border: 1px solid $colorFiller;
+  }
+}
+@media (min-width: 768px) {
+  .our-clients__overlay {
+    width: 738px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .our-clients__list {
+    width: 738px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .our-clients__item {
+    width: 226px;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+  .our-clients__headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

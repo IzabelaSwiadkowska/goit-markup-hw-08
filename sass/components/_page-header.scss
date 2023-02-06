@@ -103,3 +103,23 @@
     }
   }
 }
+@media (max-width: 767px) {
+  .navigation-to-hide {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .navigation-to-hide {
+    display: flex;
+    gap: 101px;
+  }
+  .navigation__item {
+    align-items: center;
+  }
+  .page-header__overlay {
+    height: 80px;
+  }
+}
