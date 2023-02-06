@@ -7,7 +7,7 @@
       rgba(47, 48, 58, 0.4) 0%,
       rgba(47, 48, 58, 0.4) 100%
     ),
-    url("../images/header/Img-header_480_400.png");
+    url("/images/header/Img-header_480_400.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@
         rgba(47, 48, 58, 0.4) 0%,
         rgba(47, 48, 58, 0.4) 100%
       ),
-      url("../images/header/Img-header_960_800.png");
+      url("/images/header/Img-header_960_800.png");
   }
 }
 @media (min-device-pixel-ratio: 3),
@@ -36,7 +36,7 @@
         rgba(47, 48, 58, 0.4) 0%,
         rgba(47, 48, 58, 0.4) 100%
       ),
-      url("../images/header/Img-header_1440_1200.jpg");
+      url("/images/header/Img-header_1440_1200.jpg");
   }
 }
 
