@@ -2,116 +2,105 @@
   border-bottom: 1px solid #ececec;
   background-color: $secondaryColor;
 }
-&_overlay {
+
+.page-header__overlay {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
-  height: 80px;
+  min-height: 60px;
 }
-&__logo {
+.page-header__logo {
   color: $logoMainColor;
   font-family: $alternativeFontFamily;
-  &:hover,
-  &:focus {
-    color: $logoWebColor;
-  }
+  margin-left: 15px;
 }
-.navigation {
-  display: flex;
-  flex: 1;
-  padding-left: 93px;
-  &--portfolio {
-    padding-left: 88px;
-  }
-}
-&__item {
-  display: flex;
-  justify-content: space-between;
-  gap: 46px;
-  width: 254px;
-  &--portfolio {
-    width: 261px;
-  }
-}
-&__link {
-  color: $mainColor;
-  font-weight: 500;
-  font-size: 14px;
+
+.logo--hovered {
+  color: $logoWebColor;
+  font-weight: 700;
+  font-family: $alternativeFontFamily;
+  font-size: 26px;
   line-height: 1.17;
   text-decoration: none;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: $logoWebColor;
+}
+.navigation {
+  align-content: center;
+  @include navigationGeometryMixin(83px);
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    width: 282px;
+  }
+  &--portfolio {
+    @include navigationGeometryMixin(88px);
+    width: 261px;
+  }
+  &__link {
+    color: $mainColor;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $logoWebColor;
+    }
+    &--underscore2::after {
+      @include underscoreAfterMixin(58px);
+    }
+    &--underscore {
+      position: relative;
+      justify-content: end;
+      &::after {
+        @include underscoreAfterMixin(53px);
+      }
+    }
   }
 }
-&__link--underscore {
-  position: relative;
-  justify-content: end;
-  &::after {
-    @include underscoreAfterMixin(53px);
-  }
+.mobile {
+  display: flex;
+  gap: 101px;
 }
-&__link--underscore2::after {
-  @include underscoreAfterMixin(58px);
-}
-
-@mixin underscoreAfterMixin($width) {
-  content: "";
-  display: block;
-  position: absolute;
-  width: $width;
-  height: 4px;
-  background-color: $logoWebColor;
-  border-radius: 2px;
-  margin-top: 28px;
-}
-
 .contact {
   display: flex;
-  gap: 30px;
-  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  margin-right: 15px;
   &__icon {
     fill: #757575;
   }
-}
-&__item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  &--first {
-    width: 161px;
-    &--second {
-      width: 130px;
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &:hover svg,
+    &:focus svg {
+      fill: $logoWebColor;
     }
   }
-}
-
-&__item:hover svg,
-&__item:focus svg {
-  fill: $logoWebColor;
-}
-
-&__link {
-  color: $alternativeColor;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.17;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &--first {
     width: 135px;
-    &--second {
-      width: 110px;
+  }
+  &--second {
+    width: 110px;
+  }
+  &__link {
+    color: $alternativeColor;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $logoWebColor;
     }
   }
-}
-&__link:hover,
-&__link:focus {
-  color: $logoWebColor;
 }

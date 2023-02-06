@@ -1,13 +1,14 @@
 @import "./utils/vars";
+@import "./utils/media";
 @import "./components/body";
 @import "./components/logo";
 @import "./components/page-header";
-@import "./components/footer";
+@import "./components/footer.scss";
 @import "./components/main-page";
 @import "./components/block";
 @import "./components/aboutus";
-@import "./components/ourteam";
+@import "./components/ourteam.scss";
 @import "./components/our-clients";
 @import "./components/modal";
 @import "./components/portfolio";
-@import "./components/modal-menu";
+@import "./components/mobile-menu";

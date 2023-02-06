@@ -1,38 +1,38 @@
 .our-clients {
-  width: 1170px;
+  min-width: 450px;
   background-color: $secondaryColor;
+  margin-top: 60px;
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-&_overlay {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-}
-&__headline {
-  margin-top: 0;
-  margin-bottom: 50px;
-}
-
-&__list {
-  display: flex;
-  gap: 30px;
-  margin: 0;
-}
-&_item {
-  fill: $colorFiller;
-  width: 170px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  animation: cursormovein 0.5s forwards;
-  &:hover svg {
-    animation: cursormoveout 0.5s forwards;
+  &__overlay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__headline {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 450px;
+    margin-bottom: 60px;
+  }
+  &__item {
+    fill: $colorFiller;
+    flex-basis: calc((100% - 1 * 30px) / 2);
+    width: 210px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    animation: cursormovein 0.5s forwards;
+    &:hover svg {
+      animation: cursormoveout 0.5s forwards;
+    }
   }
 }
+
 @keyframes cursormoveout {
   from {
     fill: $colorFiller;

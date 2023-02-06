@@ -1,0 +1,107 @@
+.menu__toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  padding: 0;
+  background-color: $secondaryColor;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 12px 8px 12px 8px;
+}
+.menu__toggle:hover,
+.menu__toggle:focus {
+  fill: $logoWebColor;
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $secondaryColor;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 500ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu__toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+}
+.mobile-navigation {
+  margin-top: 48px;
+  margin-left: 40px;
+}
+.mobile-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mobile-navigation__link {
+  color: $mainColor;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  font-family: $fontFamily;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.mobile-navigation__link:hover,
+.mobile-navigation__link:focus {
+  color: $logoWebColor;
+}
+.mobile-contact__link {
+  color: $alternativeColor;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  font-family: $fontFamily;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.mobile-contact__link--expand {
+  font-size: 34px;
+}
+
+.mobile-contact__link:hover,
+.mobile-contact__link:focus {
+  color: $logoWebColor;
+}
+.mobile-contact {
+  margin-left: 40px;
+  margin-top: 302px;
+}
+.mobile-contact__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-social {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 64px;
+  gap: 20px;
+  height: 22px;
+}
+.mobile-social__item:not(:first-child) {
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 10px;
+}
+.mobile-social__link {
+  text-decoration: none;
+  color: $logoWebColor;
+  font-family: $fontFamily;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}

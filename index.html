@@ -20,11 +20,12 @@
     <link href="./css/main.min.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="section page-header">
       <div class="page-header__overlay container">
         <a class="logo page-header__logo" href="#"
           ><span class="logo logo--hovered">Web</span>Studio</a
         >
+
         <nav class="navigation">
           <ul class="navigation__item">
             <li>
@@ -38,7 +39,6 @@
             <li><a class="navigation__link" href="#">Kontakt</a></li>
           </ul>
         </nav>
-
         <ul class="contact">
           <li class="contact__item contact__item--first">
             <svg class="contact__icon" width="16" height="12">
@@ -61,17 +61,17 @@
             >
           </li>
         </ul>
-      </div>
-      <div class="container">
-        <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg width="24" height="16">
-            <use href="./images/icons.svg#icon-menu_24px"></use>
-          </svg>
-        </button>
+        <div class="menu">
+          <button
+            class="menu__toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="24" height="16">
+              <use href="./images/icons.svg#icon-menu_24px"></use>
+            </svg>
+          </button>
+        </div>
       </div>
       <section class="main-page">
         <div class="main-page__overlay container">
@@ -86,7 +86,7 @@
     </header>
     <main>
       <!-- sekcja główna-->
-      <section class="block section">
+      <section class="section block">
         <div class="block__delay container">
           <ul class="block__list">
             <li class="block__item">
@@ -141,52 +141,54 @@
         </div>
       </section>
       <!--sekcja czym się zajmujemy-->
-      <section class="section aboutus">
-        <div class="aboutus__delay container">
-          <h2 class="aboutus__title">Czym się zajmujemy</h2>
-          <ul class="aboutus__content">
-            <li class="aboutus__item">
-              <figure class="aboutus__img">
-                <img
-                  src="images/aboutus/box1.jpg"
-                  alt="czytnik oraz klawiatura komputerowa"
-                  width="370"
-                  height="294"
-                />
-                <figcaption class="aboutus__label">
-                  aplikacje komputerowe
-                </figcaption>
-              </figure>
-            </li>
-            <li class="aboutus__item">
-              <figure class="aboutus__img">
-                <img
-                  src="images/aboutus/box2.jpg"
-                  alt="smartfon i laptop"
-                  width="370"
-                  height="294"
-                />
-                <figcaption class="aboutus__label">
-                  aplikacje mobilne
-                </figcaption>
-              </figure>
-            </li>
-            <li class="aboutus__item">
-              <figure class="aboutus__img">
-                <img
-                  src="images/aboutus/box3.jpg"
-                  alt="tablet"
-                  width="370"
-                  height="294"
-                />
-                <figcaption class="aboutus__label">
-                  rozwiązania graficzne
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <div class="mobile">
+        <section class="section aboutus">
+          <div class="aboutus__delay container">
+            <h2 class="aboutus__title">Czym się zajmujemy</h2>
+            <ul class="aboutus__content">
+              <li class="aboutus__item">
+                <figure class="aboutus__img">
+                  <img
+                    src="images/aboutus/box1.jpg"
+                    alt="czytnik oraz klawiatura komputerowa"
+                    width="370"
+                    height="294"
+                  />
+                  <figcaption class="aboutus__label">
+                    aplikacje komputerowe
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="aboutus__item">
+                <figure class="aboutus__img">
+                  <img
+                    src="images/aboutus/box2.jpg"
+                    alt="smartfon i laptop"
+                    width="370"
+                    height="294"
+                  />
+                  <figcaption class="aboutus__label">
+                    aplikacje mobilne
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="aboutus__item">
+                <figure class="aboutus__img">
+                  <img
+                    src="images/aboutus/box3.jpg"
+                    alt="tablet"
+                    width="370"
+                    height="294"
+                  />
+                  <figcaption class="aboutus__label">
+                    rozwiązania graficzne
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
       <!--sekcja nasz zespół-->
       <section class="section ourteam">
         <div class="ourteam__delay container">
@@ -194,10 +196,19 @@
           <ul class="ourteam__list">
             <li class="ourteam__item">
               <img
-                src="images/ourteam/ourteam1.jpg"
+                src="/images/ourteam/ourteam1_450_460.jpg"
                 alt="mężczyzna w okularach"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                srcset="
+                  /images/ourteam/ourteam1_450_460.jpg 450w,
+                  /images/ourteam/ourteam1_900_920.jpg 900w,
+                  /images/ourteam/ourteam1_708_748.jpg 708w,
+                  /images/ourteam/ourteam1_540_520.jpg 540w,
+                  /images/ourteam/ourteam1_354_374.jpg 354w,
+                  /images/ourteam/ourteam1_270_260.jpg 270w
+                "
+                sizes="(min-width: 1200px) 270px ,(min-width: 678px) 354px, 100vw"
               />
               <h3 class="ourteam__name">John Doe</h3>
               <p class="ourteam__position">Product Designer</p>
@@ -228,10 +239,19 @@
             </li>
             <li class="ourteam__item">
               <img
-                src="images/ourteam/ourteam2.jpg"
+                src="/images/ourteam/ourteam2_450_460.jpg"
                 alt="blondyka"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                srcset="
+                  /images/ourteam/ourteam2_450_460.jpg 450w,
+                  /images/ourteam/ourteam2_900_920.jpg 900w,
+                  /images/ourteam/ourteam2_708_748.jpg 708w,
+                  /images/ourteam/ourteam2_540_520.jpg 540w,
+                  /images/ourteam/ourteam2_354_374.jpg 354w,
+                  /images/ourteam/ourteam2_270_260.jpg 270w
+                "
+                sizes="(min-width: 1200px) 270px ,(min-width: 678px) 354px, 100vw"
               />
               <h3 class="ourteam__name">John Doe</h3>
               <p class="ourteam__position">Frontend Developer</p>
@@ -262,10 +282,19 @@
             </li>
             <li class="ourteam__item">
               <img
-                src="images/ourteam/ourteam3.jpg"
+                src="/images/ourteam/ourteam3_450_460.jpg"
                 alt="blondyn"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                srcset="
+                  /images/ourteam/ourteam3_450_460.jpg 450w,
+                  /images/ourteam/ourteam3_900_920.jpg 900w,
+                  /images/ourteam/ourteam3_708_748.jpg 708w,
+                  /images/ourteam/ourteam3_540_520.jpg 540w,
+                  /images/ourteam/ourteam3_354_374.jpg 354w,
+                  /images/ourteam/ourteam3_270_260.jpg 270w
+                "
+                sizes="(min-width: 1200px) 270px ,(min-width: 678px) 354px, 100vw"
               />
               <h3 class="ourteam__name">John Doe</h3>
               <p class="ourteam__position">Marketing</p>
@@ -296,10 +325,19 @@
             </li>
             <li class="ourteam__item">
               <img
-                src="images/ourteam/ourteam4.jpg"
+                src="/images/ourteam/ourteam4_450_460.jpg"
                 alt="mężczyzna w okularach2"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
+                srcset="
+                  /images/ourteam/ourteam4_450_460.jpg 450w,
+                  /images/ourteam/ourteam4_900_920.jpg 900w,
+                  /images/ourteam/ourteam4_708_748.jpg 708w,
+                  /images/ourteam/ourteam4_540_520.jpg 540w,
+                  /images/ourteam/ourteam4_354_374.jpg 354w,
+                  /images/ourteam/ourteam4_270_260.jpg 270w
+                "
+                sizes="(min-width: 1200px) 270px ,(min-width: 678px) 354px, 100vw"
               />
               <h3 class="ourteam__name">John Doe</h3>
               <p class="ourteam__position">UI Designer</p>
@@ -452,7 +490,7 @@
             role="group"
             aria-labelledby="contact-details-head"
           >
-            <h4 id="contact-details-head">
+            <h4 id="contact-details-head" class="form-group__headline">
               Zostaw swoje dane w formularzu poniżej
             </h4>
             <label class="form-group__label form-group__label--name">
@@ -510,16 +548,54 @@
         </button>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
+      <button class="menu__toggle js-close-menu">
         <svg width="24" height="16">
-          <use href="./images/icons.svg#icon-menu_24px"></use>
+          <use href="./images/icons.svg#icon-close_24px"></use>
         </svg>
-
-        >
       </button>
+      <ul class="mobile-navigation">
+        <li class="mobile-navigation__item">
+          <a class="mobile-navigation__link" href="#">Agencja</a>
+        </li>
+        <li class="mobile-navigation__item">
+          <a class="mobile-navigation__link" href="./portfolio.html"
+            >Portfolio</a
+          >
+        </li>
+        <li><a class="mobile-navigation__link" href="#">Kontakt</a></li>
+      </ul>
+
+      <ul class="mobile-contact">
+        <li class="mobile-contact__item">
+          <a
+            class="mobile-contact__link mobile-contact__link--expand"
+            href="tel:48111111111"
+            >+48 111 111 111</a
+          >
+        </li>
+        <li class="mobile-contact__item">
+          <a class="mobile-contact__link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-social">
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Instagram</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Twitter</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">Facebook</a>
+        </li>
+        <li class="mobile-social__item">
+          <a class="mobile-social__link" href="#">LinkedIn</a>
+        </li>
+      </ul>
     </div>
-    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

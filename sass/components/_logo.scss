@@ -1,13 +1,14 @@
 .logo {
+  color: $logoMainColor;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.17;
+  font-family: $alternativeFontFamily;
   text-decoration: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &--hovered {
-    color: $logoWebColor;
-    font-family: $alternativeFontFamily;
-  }
+}
+.logo:hover,
+.logo:focus {
+  color: $logoWebColor;
 }

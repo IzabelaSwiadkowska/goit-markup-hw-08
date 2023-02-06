@@ -1,50 +1,57 @@
 .footer {
   background-color: $secondaryBackgroundColor;
-  padding-top: 72px;
+  padding-top: 60px;
   padding-bottom: 60px;
+
+  &:hover,
+  &:focus {
+    color: $logoWebColor;
+  }
   &__block {
     display: flex;
-    gap: 70px;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
   }
   &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+  }
+  &__logo {
+    color: $secondaryColor;
+    font-family: $alternativeFontFamily;
+    font-style: normal;
+    width: 145px;
     margin: 0;
   }
-}
-&__logo {
-  color: $secondaryColor;
-  font-family: $alternativeFontFamily;
-  font-style: normal;
-  width: 145px;
-  margin: 0;
-  &:hover,
-  &:focus {
-    color: $logoWebColor;
+  &__social {
+    margin: 0;
+  }
+  &__item:not(:last-child) {
+    padding-bottom: 8px;
+  }
+  &__item:first-child {
+    padding-bottom: 20px;
+  }
+  &__link {
+    color: $secondaryColor;
+    text-decoration: none;
+    font-family: $fontFamily;
+    font-style: normal;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.71;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $logoWebColor;
+    }
   }
 }
-&__social {
-  margin: 0;
-}
-.footer__item:not(:last-child) {
-  padding-bottom: 9px;
-}
-&:first-child {
-  padding-bottom: 20px;
-}
-&__link {
-  color: $secondaryColor;
-  text-decoration: none;
-  font-family: $fontFamily;
-  font-style: normal;
-  font-size: 14px;
-  margin: 0;
-  line-height: 1.71;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    color: $logoWebColor;
-  }
-}
+
 .social__icons--footer {
   fill: $secondaryColor;
   background-color: rgba(255, 255, 255, 0.1);
@@ -57,6 +64,7 @@
   display: flex;
   width: 206px;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   &__headline {
     width: 113px;
@@ -68,8 +76,9 @@
 
 .contact-form {
   display: flex;
-  width: 570px;
+  width: 450px;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   &__label {
     color: $secondaryColor;
@@ -80,56 +89,58 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
   }
-}
-&__grid {
-  display: flex;
-  justify-content: space-between;
-}
-&__input {
-  display: flex;
-  width: 358px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: $secondaryBackgroundColor;
-  color: $secondaryColor;
-  &::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-    padding-left: 16px;
   }
-}
-&__button {
-  color: $secondaryColor;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  width: 200px;
-  height: 50px;
-  background: $logoWebColor;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-  border: 0px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 0;
-  box-shadow: inset 0 0 0 0 $boxShadowColor;
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  & svg {
-    fill: $secondaryColor;
+  &__input {
+    display: flex;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: $secondaryBackgroundColor;
+    color: $secondaryColor;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      align-items: center;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+      padding-left: 16px;
+    }
   }
-  &:active,
-  &:hover {
-    box-shadow: inset 200px 0 0 0 $boxShadowColor;
+  &__button {
+    color: $secondaryColor;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    background: $logoWebColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    box-shadow: inset 0 0 0 0 $boxShadowColor;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    & svg {
+      fill: $secondaryColor;
+    }
+    &:active,
+    &:hover {
+      box-shadow: inset 200px 0 0 0 $boxShadowColor;
+    }
   }
 }
