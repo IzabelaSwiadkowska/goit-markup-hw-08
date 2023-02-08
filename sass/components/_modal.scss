@@ -190,3 +190,23 @@
 .check__icon {
   margin-left: -21px;
 }
+@media (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .form-group__grid--textarea {
+    width: 448px;
+    height: 120px;
+  }
+  .close__btn {
+    left: 490px;
+    top: 8px;
+  }
+  .check__text {
+    font-size: 14px;
+  }
+  .check__link {
+    font-size: 14px;
+  }
+}

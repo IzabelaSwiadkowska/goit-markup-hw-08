@@ -21,6 +21,7 @@
     position: relative;
     width: 370px;
     height: 294px;
+    margin: 0;
   }
   &__label {
     width: 370px;
@@ -43,4 +44,12 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+@media (max-width: 480px) {
+  @include hide-on-mobile;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  @include hide-on-tablet;
+}
+@media (min-width: 1200px) {
 }

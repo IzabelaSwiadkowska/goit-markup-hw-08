@@ -9,7 +9,6 @@ main {
 }
 .container {
   min-width: 320px;
-  margin: 0 auto;
 }
 ul {
   list-style-type: none;
@@ -34,21 +33,29 @@ h4 {
   justify-content: center;
   margin: 0;
 }
-@media (min-width: 480px) {
-  @include hide-on-mobile;
+@media (max-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
-@media (min-width: 768px) {
-  @include hide-on-mobile;
+@media (min-width: 768px) and (max-width: 1199px) {
   .container {
-    min-width: 768px;
+    width: 768px;
   }
-
-  .menu-container {
-    display: none;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
-
-  .section-to-hide {
-    display: none;
+  h2 {
+    font-size: 36px;
+  }
+  h4 {
+    width: 448px;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
