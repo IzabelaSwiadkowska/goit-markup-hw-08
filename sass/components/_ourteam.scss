@@ -105,14 +105,13 @@
   }
 }
 @media (min-width: 1200px) {
-  .ourteam__picture {
-    width: 270px;
-    height: 260px;
-  }
-}
-@media (min-width: 1200px) {
   .ourteam {
-    width: 1200px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .ourteam__delay {
+    flex-direction: column;
+    align-items: center;
   }
   .ourteam__list {
     display: flex;
@@ -127,7 +126,9 @@
     width: 270px;
     height: 428px;
     flex-basis: calc((100% - 3 * 30px) / 4);
-    margin: 0;
+  }
+  .ourteam__item:nth-child(n) {
+    margin-bottom: 0;
   }
   .ourteam__headline {
     width: 210px;

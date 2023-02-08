@@ -128,7 +128,6 @@
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 auto;
-    margin-bottom: 60px;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192pi),
@@ -153,6 +152,9 @@
         ),
         url("../images/header/Img_header_4800_1800.jpg");
     }
+  }
+  .main-page__overlay {
+    max-width: 1600px;
   }
   .main-page__title {
     font-size: 44px;

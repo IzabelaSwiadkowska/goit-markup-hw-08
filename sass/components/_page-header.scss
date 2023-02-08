@@ -109,11 +109,15 @@
   .page-header__overlay {
     height: 80px;
   }
-  .contact {
-    margin-right: 0;
-  }
 }
 @media (min-width: 1200px) {
+  .page-header {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .page-header__overlay {
+    max-width: 1600px;
+  }
   @include hide-on-tablet;
   .contact {
     flex-direction: row;

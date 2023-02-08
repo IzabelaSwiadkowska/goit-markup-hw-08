@@ -259,11 +259,15 @@ h4 {
   .page-header__overlay {
     height: 80px;
   }
-  .contact {
-    margin-right: 0;
-  }
 }
 @media (min-width: 1200px) {
+  .page-header {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .page-header__overlay {
+    max-width: 1600px;
+  }
   .aboutus,
   .menu-container {
     display: none;
@@ -576,7 +580,7 @@ h4 {
   .footer {
     padding-top: 72px;
     padding-bottom: 60px;
-    min-width: 1600px;
+    min-width: 1200px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -593,10 +597,10 @@ h4 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0 auto;
   }
   .footer__block__list {
     display: block;
-    margin: 0;
   }
   .footer__list {
     -webkit-box-align: start;
@@ -726,7 +730,6 @@ h4 {
     background-position: center;
     background-repeat: no-repeat;
     margin: 0 auto;
-    margin-bottom: 60px;
   }
 }
 @media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192pi), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -739,6 +742,11 @@ h4 {
   .main-page {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header/Img_header_4800_1800.jpg");
     background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/header/Img_header_4800_1800.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .main-page__overlay {
+    max-width: 1600px;
   }
 }
 @media (min-width: 1200px) {
@@ -945,6 +953,7 @@ h4 {
   z-index: 1;
 }
 .aboutus__delay {
+  width: 1170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1116,14 +1125,18 @@ h4 {
   }
 }
 @media (min-width: 1200px) {
-  .ourteam__picture {
-    width: 270px;
-    height: 260px;
-  }
-}
-@media (min-width: 1200px) {
   .ourteam {
-    width: 1200px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .ourteam__delay {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .ourteam__list {
     display: -webkit-box;
@@ -1141,7 +1154,9 @@ h4 {
     height: 428px;
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
-    margin: 0;
+  }
+  .ourteam__item:nth-child(n) {
+    margin-bottom: 0;
   }
   .ourteam__headline {
     width: 210px;
