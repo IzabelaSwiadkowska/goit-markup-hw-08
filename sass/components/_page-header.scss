@@ -116,7 +116,7 @@
     margin: 0 auto;
   }
   .page-header__overlay {
-    max-width: 1600px;
+    min-width: 1200px;
   }
   @include hide-on-tablet;
   .contact {
