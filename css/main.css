@@ -1259,14 +1259,14 @@ h4 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
-  width: 450px;
+  max-width: 450px;
   margin-bottom: 60px;
 }
 .our-clients__item {
   fill: #afb1b8;
   -ms-flex-preferred-size: calc((100% - 30px) / 2);
       flex-basis: calc((100% - 30px) / 2);
-  max-width: 210px;
+  width: 210px;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
