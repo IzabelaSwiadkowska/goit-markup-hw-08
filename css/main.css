@@ -109,6 +109,7 @@ h4 {
 .page-header__logo {
   color: #000000;
   font-family: "raleway";
+  margin-left: 15px;
 }
 
 .logo--hovered {
@@ -251,9 +252,6 @@ h4 {
   .aboutus {
     display: none;
   }
-  .menu__toggle {
-    display: none;
-  }
   .navigation__item {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -261,10 +259,14 @@ h4 {
   }
   .page-header__overlay {
     height: 80px;
+    margin: 0 auto;
+  }
+  .menu__button {
+    display: none;
   }
 }
 @media (min-width: 1200px) {
-  .menu__toggle {
+  .menu__button {
     display: none;
   }
   .page-header {
@@ -272,6 +274,9 @@ h4 {
   }
   .page-header__overlay {
     min-width: 1200px;
+  }
+  .page-header__logo {
+    margin-left: 0;
   }
   .contact {
     -webkit-box-orient: horizontal;
@@ -312,6 +317,7 @@ h4 {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  margin: 0 auto;
   min-width: 100%;
 }
 .footer:hover, .footer:focus {
@@ -1177,7 +1183,6 @@ h4 {
 }
 @media (min-width: 1200px) {
   .ourteam {
-    max-width: 1600px;
     margin: 0 auto;
   }
   .ourteam__delay {
@@ -1261,7 +1266,7 @@ h4 {
   fill: #afb1b8;
   -ms-flex-preferred-size: calc((100% - 30px) / 2);
       flex-basis: calc((100% - 30px) / 2);
-  width: 210px;
+  max-width: 210px;
   border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;

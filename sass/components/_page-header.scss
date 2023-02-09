@@ -11,6 +11,7 @@
 .page-header__logo {
   color: $logoMainColor;
   font-family: $alternativeFontFamily;
+  margin-left: 15px;
 }
 
 .logo--hovered {
@@ -102,23 +103,31 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   @include hide-on-tablet;
-  @include hide-on-desktop;
+
   .navigation__item {
     align-items: center;
   }
   .page-header__overlay {
     height: 80px;
+    margin: 0 auto;
+  }
+  .menu__button {
+    display: none;
   }
 }
 @media (min-width: 1200px) {
-  @include hide-on-desktop;
+  .menu__button {
+    display: none;
+  }
   .page-header {
     margin: 0 auto;
   }
   .page-header__overlay {
     min-width: 1200px;
   }
-
+  .page-header__logo {
+    margin-left: 0;
+  }
   .contact {
     flex-direction: row;
     gap: 30px;

@@ -10,11 +10,6 @@
     display: none;
   }
 }
-@mixin hide-on-desktop {
-  .menu__toggle {
-    display: none;
-  }
-}
 
 @mixin underscoreAfterMixin($width) {
   content: "";
