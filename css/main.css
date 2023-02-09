@@ -44,19 +44,19 @@ h4 {
   margin: 0;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) {
   .container {
-    width: 480px;
+    min-width: 320px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
   h2 {
     font-size: 36px;
@@ -101,7 +101,6 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -110,7 +109,6 @@ h4 {
 .page-header__logo {
   color: #000000;
   font-family: "raleway";
-  margin-left: 15px;
 }
 
 .logo--hovered {
@@ -204,7 +202,6 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 15px;
 }
 .contact__icon {
   fill: #757575;
@@ -251,6 +248,12 @@ h4 {
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
+  .aboutus {
+    display: none;
+  }
+  .menu__toggle {
+    display: none;
+  }
   .navigation__item {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -261,16 +264,14 @@ h4 {
   }
 }
 @media (min-width: 1200px) {
+  .menu__toggle {
+    display: none;
+  }
   .page-header {
-    max-width: 1600px;
     margin: 0 auto;
   }
   .page-header__overlay {
     min-width: 1200px;
-  }
-  .aboutus,
-  .menu-container {
-    display: none;
   }
   .contact {
     -webkit-box-orient: horizontal;
@@ -311,6 +312,7 @@ h4 {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  min-width: 100%;
 }
 .footer:hover, .footer:focus {
   color: #2196f3;
@@ -443,7 +445,7 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 358px;
+  min-width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -629,7 +631,7 @@ h4 {
   }
 }
 .main-page {
-  width: 480px;
+  max-width: 480px;
   height: 400px;
   background-color: #2f303a;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/header/Img-header_480_400.png");
@@ -745,11 +747,6 @@ h4 {
   }
 }
 @media (min-width: 1200px) {
-  .main-page__overlay {
-    max-width: 1600px;
-  }
-}
-@media (min-width: 1200px) {
   .main-page__title {
     font-size: 44px;
     line-height: 1.36;
@@ -799,7 +796,7 @@ h4 {
 }
 
 .block__item {
-  width: 450px;
+  min-width: 270px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -828,16 +825,25 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 450px;
-  height: 120px;
+  min-width: 270px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.attribute__icon {
+  width: 450px;
+  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 190px;
 }
 
 .attribute__title {
@@ -853,13 +859,18 @@ h4 {
 }
 
 .attribute__text {
+  width: 450px;
   color: #757575;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
   margin: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+  .block {
+    margin-bottom: 45px;
+  }
   .block__list {
     width: 738px;
     display: -webkit-box;
@@ -875,23 +886,35 @@ h4 {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
   }
-  .block__item:last-child {
-    margin-bottom: 30px;
+  .block__item:nth-child(n) {
+    margin-bottom: 0;
   }
   .attribute {
     width: 354px;
   }
-  .attribute__title {
+  .attribute__icon {
     width: 354px;
+    height: 120px;
+    padding: 25px 142px;
+  }
+  .attribute__title {
+    min-width: 354px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .attribute__text {
+    width: 354px;
+    height: 65px;
   }
 }
 @media (min-width: 1200px) {
   .block {
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+  .block__delay {
+    width: 1170px;
   }
   .block__list {
     width: 1170px;
@@ -910,6 +933,11 @@ h4 {
   }
   .attribute {
     width: 270px;
+  }
+  .attribute__icon {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
   }
   .attribute__title {
     width: 270px;
@@ -989,7 +1017,7 @@ h4 {
           justify-content: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .navigation,
   .contact,
   .aboutus {
@@ -997,14 +1025,13 @@ h4 {
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
-  .aboutus,
-  .menu-container {
+  .aboutus {
     display: none;
   }
 }
 .ourteam {
   background-color: #f5f4fa;
-  min-width: 480px;
+  min-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1013,6 +1040,7 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
 }
 .ourteam__delay {
   display: -webkit-box;
@@ -1137,8 +1165,6 @@ h4 {
     height: 374px;
   }
   .ourteam__item {
-    width: 354px;
-    height: 536px;
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
   }
@@ -1176,7 +1202,6 @@ h4 {
   }
   .ourteam__item {
     width: 270px;
-    height: 428px;
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
   }
@@ -1190,12 +1215,13 @@ h4 {
   }
 }
 .our-clients {
-  min-width: 450px;
+  min-width: 320px;
   background-color: #ffffff;
   margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
 }
 .our-clients__overlay {
   display: -webkit-box;
@@ -1901,23 +1927,4 @@ h4 {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-}
-
-@media (max-width: 479px) {
-  .aboutus,
-  .menu-container {
-    display: none;
-  }
-}
-@media (min-width: 481px) and (max-width: 1199px) {
-  .aboutus,
-  .menu-container {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .menu-container,
-  .menu__toggle {
-    display: none;
-  }
 }/*# sourceMappingURL=main.css.map */

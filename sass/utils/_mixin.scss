@@ -6,13 +6,11 @@
   }
 }
 @mixin hide-on-tablet {
-  .aboutus,
-  .menu-container {
+  .aboutus {
     display: none;
   }
 }
 @mixin hide-on-desktop {
-  .menu-container,
   .menu__toggle {
     display: none;
   }

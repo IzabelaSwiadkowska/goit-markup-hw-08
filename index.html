@@ -90,51 +90,55 @@
           <ul class="block__list">
             <li class="block__item">
               <div class="attribute">
-                <svg width="70" height="70">
+                <svg class="attribute__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-antenna-1"></use>
                 </svg>
+
+                <h5 class="attribute__title">LOREM IPSUM</h5>
+                <p class="attribute__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
               </div>
-              <h5 class="attribute__title">LOREM IPSUM</h5>
-              <p class="attribute__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
             </li>
             <li class="block__item">
               <div class="attribute">
-                <svg width="70" height="70">
+                <svg class="attribute__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-clock-1"></use>
                 </svg>
+
+                <h5 class="attribute__title">LOREM IPSUM</h5>
+                <p class="attribute__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
               </div>
-              <h5 class="attribute__title">LOREM IPSUM</h5>
-              <p class="attribute__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
             </li>
             <li class="block__item">
               <div class="attribute">
-                <svg width="70" height="70">
+                <svg class="attribute__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-diagram-1"></use>
                 </svg>
+
+                <h5 class="attribute__title">LOREM IPSUM</h5>
+                <p class="attribute__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
               </div>
-              <h5 class="attribute__title">LOREM IPSUM</h5>
-              <p class="attribute__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
             </li>
             <li class="block__item">
               <div class="attribute">
-                <svg width="70" height="70">
+                <svg class="attribute__icon" width="70" height="70">
                   <use href="./images/icons.svg#icon-astronaut-1"></use>
                 </svg>
+
+                <h5 class="attribute__title">LOREM IPSUM</h5>
+                <p class="attribute__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
               </div>
-              <h5 class="attribute__title">LOREM IPSUM</h5>
-              <p class="attribute__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
             </li>
           </ul>
         </div>
@@ -148,10 +152,14 @@
             <li class="aboutus__item">
               <figure class="aboutus__img">
                 <img
-                  src="images/aboutus/box1.jpg"
+                  src="images/aboutus/box1_370_294.jpg"
                   alt="czytnik oraz klawiatura komputerowa"
                   width="370"
                   height="294"
+                  srcset="
+                    images/aboutus/box1_740_588.jpg  2x,
+                    images/aboutus/box1_1110_882.jpg 3x
+                  "
                 />
                 <figcaption class="aboutus__label">
                   aplikacje komputerowe
@@ -161,10 +169,14 @@
             <li class="aboutus__item">
               <figure class="aboutus__img">
                 <img
-                  src="images/aboutus/box2.jpg"
+                  src="images/aboutus/box2_370_294.jpg"
                   alt="smartfon i laptop"
                   width="370"
                   height="294"
+                  srcset="
+                    images/aboutus/box2_740_588.jpg  2x,
+                    images/aboutus/box2_1110_882.jpg 3x
+                  "
                 />
                 <figcaption class="aboutus__label">
                   aplikacje mobilne
@@ -174,11 +186,16 @@
             <li class="aboutus__item">
               <figure class="aboutus__img">
                 <img
-                  src="images/aboutus/box3.jpg"
+                  src="images/aboutus/box3_370_294.jpg"
                   alt="tablet"
                   width="370"
                   height="294"
+                  srcset="
+                    images/aboutus/box3_740_588.jpg  2x,
+                    images/aboutus/box3_1110_882.jpg 3x
+                  "
                 />
+
                 <figcaption class="aboutus__label">
                   rozwiązania graficzne
                 </figcaption>
@@ -591,6 +608,11 @@
       </ul>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

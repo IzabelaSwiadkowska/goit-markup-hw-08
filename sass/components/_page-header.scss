@@ -6,13 +6,11 @@
 .page-header__overlay {
   display: flex;
   align-items: center;
-  margin: 0 auto;
   justify-content: space-between;
 }
 .page-header__logo {
   color: $logoMainColor;
   font-family: $alternativeFontFamily;
-  margin-left: 15px;
 }
 
 .logo--hovered {
@@ -65,7 +63,6 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
-  margin-right: 15px;
   &__icon {
     fill: #757575;
   }
@@ -102,7 +99,10 @@
 @media (max-width: 767px) {
   @include hide-on-mobile;
 }
+
 @media (min-width: 768px) and (max-width: 1199px) {
+  @include hide-on-tablet;
+  @include hide-on-desktop;
   .navigation__item {
     align-items: center;
   }
@@ -111,14 +111,14 @@
   }
 }
 @media (min-width: 1200px) {
+  @include hide-on-desktop;
   .page-header {
-    max-width: 1600px;
     margin: 0 auto;
   }
   .page-header__overlay {
     min-width: 1200px;
   }
-  @include hide-on-tablet;
+
   .contact {
     flex-direction: row;
     gap: 30px;

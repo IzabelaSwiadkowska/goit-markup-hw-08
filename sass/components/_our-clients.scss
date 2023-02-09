@@ -1,8 +1,10 @@
 .our-clients {
-  min-width: 450px;
+  min-width: 320px;
   background-color: $secondaryColor;
   margin-top: 60px;
   display: flex;
+  margin: 0 auto;
+
   &__overlay {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +23,7 @@
     flex-wrap: wrap;
     gap: 30px;
     width: 450px;
+
     margin-bottom: 60px;
   }
   &__item {
