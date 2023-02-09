@@ -1222,29 +1222,36 @@ h4 {
 .our-clients {
   min-width: 320px;
   background-color: #ffffff;
-  margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
 }
+
 .our-clients__overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
 }
+
 .our-clients__headline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 314px;
-  margin-top: 0;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1252,34 +1259,42 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
 }
+
 .our-clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
-  max-width: 450px;
-  margin-bottom: 60px;
-}
-.our-clients__item {
-  fill: #afb1b8;
-  -ms-flex-preferred-size: calc((100% - 30px) / 2);
-      flex-basis: calc((100% - 30px) / 2);
-  width: 210px;
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: cursormovein 0.5s forwards;
-          animation: cursormovein 0.5s forwards;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+.our-clients__item {
+  fill: #afb1b8;
 }
 .our-clients__item:hover svg {
   -webkit-animation: cursormoveout 0.5s forwards;
           animation: cursormoveout 0.5s forwards;
+}
+
+.our-clients__icon {
+  fill: #afb1b8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 210px;
+  height: 92px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  -webkit-animation: cursormovein 0.5s forwards;
+          animation: cursormovein 0.5s forwards;
 }
 
 @-webkit-keyframes cursormoveout {
@@ -1324,68 +1339,37 @@ h4 {
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
-  .our-clients__overlay {
-    width: 738px;
-    margin: 0 auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .our-clients {
+    min-width: 768px;
   }
-  .our-clients__list {
-    width: 738px;
-    gap: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .our-clients__overlay {
+    min-width: 768px;
   }
   .our-clients__item {
     width: 226px;
-    -ms-flex-preferred-size: calc((100% - 60px) / 3);
-        flex-basis: calc((100% - 60px) / 3);
   }
-  .our-clients__headline {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .our-clients__icon {
+    width: 226px;
   }
 }
 @media (min-width: 1200px) {
   .our-clients {
-    width: 1170px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 auto;
+    min-width: 1200px;
   }
   .our-clients__overlay {
-    margin: 0 auto;
-  }
-  .our-clients__headline {
-    width: 210px;
+    min-width: 1200px;
   }
   .our-clients__list {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    gap: 30px;
-    width: 1170px;
-    margin: 0;
+    margin: 0 auto;
   }
   .our-clients__item {
-    -ms-flex-preferred-size: calc((100% - 150px) / 6);
-        flex-basis: calc((100% - 150px) / 6);
     width: 170px;
+  }
+  .our-clients__icon {
+    width: 170px;
+  }
+  .our-clients__headline {
+    margin-top: 0;
   }
 }
 .modal {
