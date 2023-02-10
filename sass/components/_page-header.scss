@@ -1,17 +1,24 @@
 .page-header {
   border-bottom: 1px solid #ececec;
   background-color: $secondaryColor;
+  width: 100vw;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .page-header__overlay {
   display: flex;
   align-items: center;
+  width: 100vw;
+  padding: 15px 16px;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .page-header__logo {
   color: $logoMainColor;
   font-family: $alternativeFontFamily;
-  margin-left: 15px;
 }
 
 .logo--hovered {
@@ -97,8 +104,12 @@
     }
   }
 }
-@media (max-width: 767px) {
+
+@media (min-width: 480px) and (max-width: 767px) {
   @include hide-on-mobile;
+  .page-header__overlay {
+    max-width: 767px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
