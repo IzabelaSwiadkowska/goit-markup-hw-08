@@ -2,49 +2,47 @@
   width: 100vw;
   background-color: $secondaryColor;
   display: flex;
-}
-
-.our-clients__overlay {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-.our-clients__headline {
-  display: flex;
-  width: 314px;
-  margin-top: 60px;
-  margin-bottom: 30px;
-  justify-content: center;
-  align-items: center;
-}
-.our-clients__list {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 60px;
-  gap: 30px;
-}
-.our-clients__item {
-  margin: 0;
-  fill: $colorFiller;
-  flex-basis: calc((100% - 30px) / 2);
-
-  &:hover svg {
-    animation: cursormoveout 0.5s forwards;
+  margin: 0 auto;
+  &__overlay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
   }
-}
-.our-clients__icon {
-  fill: $colorFiller;
-  display: flex;
-  width: 210px;
-  height: 92px;
-  justify-content: center;
-  border: 1px solid $colorFiller;
-  border-radius: 4px;
-  animation: cursormovein 0.5s forwards;
+  &__headline {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  &__item {
+    fill: $colorFiller;
+    height: 92px;
+    border-radius: 4px;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: cursormovein 0.5s forwards;
+    &:hover svg {
+      animation: cursormoveout 0.5s forwards;
+    }
+    .our-clients__icon {
+      width: 106px;
+      border: 0;
+    }
+  }
 }
 
 @keyframes cursormoveout {
@@ -67,14 +65,12 @@
     border: 1px solid $colorFiller;
   }
 }
+
 @media (min-width: 480px) and (max-width: 767px) {
   .our-clients {
     width: 450px;
   }
   .our-clients__item {
-    width: 210px;
-  }
-  .our-clients__icon {
     width: 210px;
   }
 }
