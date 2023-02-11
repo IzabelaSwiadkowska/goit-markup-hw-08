@@ -133,16 +133,13 @@
   .ourteam__item {
     width: 270px;
     flex-basis: calc((100% - 3 * 30px) / 4);
-  }
-  .ourteam__item:nth-child(n) {
-    margin-bottom: 0;
-  }
-  .ourteam__headline {
-    width: 210px;
-    margin-bottom: 50px;
-    margin-top: 0;
-  }
-  .ourteam__position {
-    margin: 0;
+    &:nth-child(n) {
+      margin-bottom: 0;
+    }
+    .ourteam__headline {
+      width: 210px;
+      margin-bottom: 50px;
+      margin-top: 0;
+    }
   }
 }
