@@ -1157,7 +1157,7 @@ h4 {
   margin-bottom: 60px;
 }
 .ourteam__headline {
-  width: 163px;
+  max-width: 210px;
   margin-bottom: 30px;
   margin-top: 60px;
 }
@@ -1280,8 +1280,7 @@ h4 {
   .ourteam__item:nth-child(n) {
     margin-bottom: 0;
   }
-  .ourteam__item .ourteam__headline {
-    width: 210px;
+  .ourteam__headline {
     margin-bottom: 50px;
     margin-top: 0;
   }

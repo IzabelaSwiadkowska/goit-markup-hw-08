@@ -37,7 +37,7 @@
     }
   }
   &__headline {
-    width: 163px;
+    max-width: 210px;
     margin-bottom: 30px;
     margin-top: 60px;
   }
@@ -136,10 +136,9 @@
     &:nth-child(n) {
       margin-bottom: 0;
     }
-    .ourteam__headline {
-      width: 210px;
-      margin-bottom: 50px;
-      margin-top: 0;
-    }
+  }
+  .ourteam__headline {
+    margin-bottom: 50px;
+    margin-top: 0;
   }
 }
