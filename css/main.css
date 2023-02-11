@@ -1373,6 +1373,7 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 60px;
 }
 
 .our-clients__item {
@@ -1466,7 +1467,6 @@ h4 {
   .our-clients__list {
     width: 738px;
     margin-top: 0;
-    margin-bottom: 60px;
   }
   .our-clients__item {
     width: 226px;
