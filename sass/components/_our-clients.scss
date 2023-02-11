@@ -1,5 +1,5 @@
 .our-clients {
-  width: 100vw;
+  width: 100%;
   background-color: $secondaryColor;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@
   &__headline {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 30px;
     margin-top: 60px;
@@ -23,7 +23,7 @@
 
   .our-clients__list {
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
@@ -89,7 +89,6 @@
   }
   .our-clients__list {
     width: 738px;
-    gap: 30px;
     margin-top: 0;
     margin-bottom: 60px;
   }
@@ -107,6 +106,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 0;
+  }
+  .our-clients__headline {
+    margin-top: 0;
+    margin-bottom: 50px;
   }
   .our-clients__item {
     max-width: 170px;
