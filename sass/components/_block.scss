@@ -11,7 +11,6 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-
   gap: 30px;
 }
 
@@ -30,14 +29,14 @@
 }
 
 .attribute {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .attribute__icon {
-  width: 90vw;
+  width: 100vw;
   background-color: #f5f4fa;
   border-radius: 4px;
 }
@@ -94,7 +93,7 @@
     flex-wrap: wrap;
   }
   .block__item {
-    max-width: 354px;
+    width: 354px;
     flex-basis: calc((100% - 30px) / 2);
   }
   .block__item:nth-child(n) {
@@ -109,7 +108,7 @@
     padding: 25px 142px;
   }
   .attribute__title {
-    min-width: 354px;
+    width: 354px;
     justify-content: flex-start;
   }
   .attribute__text {
