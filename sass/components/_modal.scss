@@ -191,6 +191,15 @@
 .check__icon {
   margin-left: -21px;
 }
+@media (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+  .close__btn {
+    left: 412px;
+  }
+}
 @media (min-width: 1200px) {
   .modal {
     width: 528px;
