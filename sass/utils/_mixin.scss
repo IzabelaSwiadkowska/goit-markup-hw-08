@@ -10,7 +10,12 @@
     display: none;
   }
 }
-
+@mixin padding-on-tablet {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 @mixin underscoreAfterMixin($width) {
   content: "";
   display: block;

@@ -5,7 +5,6 @@
   padding-top: 60px;
   padding-bottom: 60px;
   width: 100%;
-
   &:hover,
   &:focus {
     color: $logoWebColor;
@@ -153,12 +152,12 @@
   .contact__form {
     justify-content: center;
     margin: 0 auto;
-  }
-  .contact-form__grid {
-    width: 405px;
-  }
-  .contact-form__input {
-    width: 405px;
+    &__grid {
+      width: 405px;
+    }
+    &__input {
+      width: 405px;
+    }
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -174,15 +173,16 @@
   .contact-form {
     width: 450px;
     justify-content: start;
-  }
-  .contact-form__label {
-    display: flex;
-  }
-  .contact-form__input {
-    width: 450px;
+    &__label {
+      display: flex;
+    }
+    &__input {
+      width: 450px;
+    }
   }
 }
 @media (min-width: 1200px) {
+  @include padding-on-tablet;
   .footer {
     padding-top: 72px;
     padding-bottom: 60px;
@@ -197,24 +197,21 @@
     justify-content: center;
     margin: 0 auto;
     &__list {
-      display: block;
+      align-items: start;
     }
-  }
-  .footer__list {
-    align-items: start;
-  }
-  .footer__item:not(:last-child) {
-    padding-bottom: 9px;
+    &__item:not(:last-child) {
+      padding-bottom: 9px;
+    }
   }
   .contact-form {
     width: 570px;
     gap: 20px;
-  }
-  .contact-form__input {
-    width: 358px;
-  }
-  .contact-form__grid {
-    width: 570px;
-    flex-direction: row;
+    &__input {
+      width: 358px;
+    }
+    &__grid {
+      width: 570px;
+      flex-direction: row;
+    }
   }
 }
