@@ -3,48 +3,47 @@
   background-color: $secondaryColor;
   display: flex;
   justify-content: center;
-
   margin: 0 auto;
-  &__overlay {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-  }
-  &__headline {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 30px;
-    margin-top: 60px;
-  }
+}
+.our-clients__overlay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.our-clients__headline {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
 
-  .our-clients__list {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  .our-clients__item {
-    fill: $colorFiller;
-    height: 92px;
-    border-radius: 4px;
-    flex-basis: calc((100% - 2 * 30px) / 2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: cursormovein 0.5s forwards;
-  }
-  .our-clients__item:hover {
-    animation: cursormoveout 0.5s forwards;
-  }
-  .our-clients__icon {
-    width: 106px;
-  }
+.our-clients__list {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.our-clients__item {
+  fill: $colorFiller;
+  height: 92px;
+  border-radius: 4px;
+  flex-basis: calc((100% - 2 * 30px) / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cursormovein 0.5s forwards;
+}
+.our-clients__item:hover {
+  animation: cursormoveout 0.5s forwards;
+}
+.our-clients__icon {
+  width: 106px;
 }
 
 @keyframes cursormoveout {
@@ -72,17 +71,20 @@
   .our-clients {
     width: 450px;
   }
+
   .our-clients__list {
     margin-bottom: 60px;
   }
-  .our-clients__item {
+  .our-clients_item {
     width: 210px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .our-clients {
     width: 738px;
   }
+
   .our-clients__headline {
     margin-top: 58px;
     margin-bottom: 30px;
@@ -101,6 +103,7 @@
   .our-clients {
     width: 1170px;
   }
+
   .our-clients__list {
     width: 1170px;
     flex-direction: row;
