@@ -3,6 +3,7 @@
   background-color: $secondaryColor;
   display: flex;
   justify-content: center;
+
   margin: 0 auto;
   &__overlay {
     display: flex;
@@ -16,7 +17,8 @@
     justify-content: center;
     width: 100vw;
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 60px;
   }
 
   .our-clients__list {
@@ -94,6 +96,7 @@
     width: 1170px;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin: 0;
   }
   .our-clients__item {
     max-width: 170px;

@@ -1,7 +1,9 @@
 .block {
-  padding-bottom: 0;
-  margin-bottom: 60px;
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
   width: 100vw;
+  margin: 0 auto;
 }
 
 .block__list {
@@ -9,6 +11,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
   gap: 30px;
 }
 
