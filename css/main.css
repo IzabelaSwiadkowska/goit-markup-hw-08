@@ -2000,6 +2000,16 @@ h4 {
 
 .menu-container {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   top: 0;
   left: 0;
   width: 100%;
@@ -2048,7 +2058,6 @@ h4 {
 
 .mobile-contact {
   margin-left: 40px;
-  margin-top: 302px;
 }
 .mobile-contact__link {
   color: #757575;
@@ -2074,7 +2083,7 @@ h4 {
   display: -ms-flexbox;
   display: flex;
   margin-left: 40px;
-  margin-top: 64px;
+  margin-bottom: 48px;
   gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;

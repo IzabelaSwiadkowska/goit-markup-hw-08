@@ -16,6 +16,9 @@
 }
 .menu-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   top: 0;
   left: 0;
   width: 100%;
@@ -59,7 +62,7 @@
 }
 .mobile-contact {
   margin-left: 40px;
-  margin-top: 302px;
+
   &__link {
     color: $alternativeColor;
     font-weight: 500;
@@ -84,7 +87,7 @@
 .mobile-social {
   display: flex;
   margin-left: 40px;
-  margin-top: 64px;
+  margin-bottom: 48px;
   gap: 20px;
   flex-wrap: wrap;
   &__item:not(:first-child) {
