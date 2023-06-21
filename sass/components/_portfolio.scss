@@ -1,10 +1,8 @@
 .products {
   margin: 0 auto;
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   &__container {
-    width: 90%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -12,49 +10,42 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
-    width: 322px;
-    padding-left: 24px;
-    margin-top: 20px;
-    margin-bottom: 4px;
+    padding: 20px 24px 4px 24px;
+    margin: 0;
   }
   &__description {
     color: $alternativeColor;
     font-size: 16px;
     line-height: 1.87;
-    width: 322px;
-    padding-left: 24px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    padding: 0px 24px 20px 24px;
+    margin: 0;
   }
   &__overlay {
     position: absolute;
-    width: 370px;
-    height: 294px;
-    padding: 49px 45px 49px 24px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     font-weight: 400;
     font-size: 18px;
     color: $secondaryColor;
     top: 0;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(102%);
     transition: transform 250ms ease;
   }
   &__item {
     position: relative;
-    width: 370px;
-    height: 294px;
     overflow: hidden;
   }
 }
 
 .buttons {
-  width: 90%;
+  width: 100%;
+  margin: 0;
+  padding: 60px 73px 40px 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 40px;
-  margin-top: 0;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &__item {
@@ -63,12 +54,33 @@
     font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
+    padding-top: 6px;
+    padding-bottom: 6px;
     cursor: pointer;
-    padding: 6px 22px;
     border: 0px solid;
     border-radius: 4px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &--all {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+    &--pages {
+      padding-left: 40px;
+      padding-right: 39px;
+    }
+    &--aplications {
+      padding-left: 37px;
+      padding-right: 38px;
+    }
+    &--design {
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+    &--marketing {
+      padding-left: 27px;
+      padding-right: 26px;
+    }
     &:hover,
     &:focus {
       font-weight: 500;
@@ -81,17 +93,21 @@
 }
 
 .grid {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
   &__item {
-    width: 90%;
+    width: 100%;
     border-bottom: 1px solid #eeeeee;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:last-child {
+      margin-bottom: 60px;
+    }
     &:hover {
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -102,87 +118,51 @@
     }
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .buttons {
-    max-width: 392px;
-    height: 91px;
-  }
-  .grid {
-    max-width: 480px;
+    padding: 60px 61px 30px 62px;
   }
   .grid__item {
-    max-width: 450px;
+    width: 354px;
+    flex-basis: calc((100% - 1 * 30px) / 2);
   }
-}
-@media (max-width: 767px) {
-  @include hide-on-mobile;
+  .products__image {
+    width: 354px;
+    height: 294px;
+  }
 }
 @media (min-width: 1200px) {
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    &__container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    &__name {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 2;
-      width: 322px;
-      padding-left: 24px;
-      margin-top: 20px;
-      margin-bottom: 4px;
-    }
-    &__description {
-      color: $alternativeColor;
-      font-size: 16px;
-      line-height: 1.87;
-      width: 322px;
-      padding-left: 24px;
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
-    &__overlay {
-      position: absolute;
-      width: 370px;
-      height: 294px;
-      padding: 49px 45px 49px 24px;
-      background-color: rgba(33, 150, 243, 0.9);
-      font-weight: 400;
-      font-size: 18px;
-      color: $secondaryColor;
-      top: 0;
-      left: 0;
-      transform: translateY(100%);
-      transition: transform 250ms ease;
-    }
-    &__item {
-      position: relative;
-      width: 370px;
-      height: 294px;
-      overflow: hidden;
-    }
-  }
-
   .buttons {
-    width: 572px;
-    display: flex;
-    gap: 8px;
-    margin-bottom: 34px;
-    margin-top: 0;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
+    padding-bottom: 50px;
+    justify-content: center;
+    &--all {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+    &--pages {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+    &--aplications {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+    &--design {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+    &--marketing {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
   }
 
-  .grid {
-    width: 1170px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
+  .grid__item {
+    width: 370px;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
